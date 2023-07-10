@@ -22,3 +22,13 @@ switch(optionTypeOffer){
             break;
             }
 
+   let discountCodePresent = false;
+   for(let i = 0; i < unusableCodes.length; i++){
+    if(unusableCodes[i] == discountCode){
+        discountCodePresent = true; 
+        unusableCodes.splice(i, 1);
+        break;
+    }
+   }
+
+    
