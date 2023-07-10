@@ -31,4 +31,15 @@ switch(optionTypeOffer){
     }
    }
 
-    
+    if((discountCode !="") && !discountCodePresent){
+        alert ("il codice sconto non è valido");
+        document.getElementById("discount code").classList.add("text-danger");
+    }
+
+    if(discountCode){
+        finalPrice = 0.75 * finalPrice;
+
+    }
+     finalPrice = finalPrice.toFixed(2);
+     document.getElementById("price").innerHTML ="il prezzo finale è di:" + finalPrice;
+     
